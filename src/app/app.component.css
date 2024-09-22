@@ -1,3 +1,29 @@
-.navbar-right{
+.navbar-right {
     margin-left: auto;
+}
+
+.navbar {
+    z-index: 1030; /* Ensure it stays on top of other elements */
+  }
+
+.section {
+    height: 100vh;
+    /* Each section takes full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+#home {
+    background-color: lightblue;
+}
+
+#about {
+    background-color: lightgreen;
+}
+
+#contactme {
+    background-color: lightcoral;
 }
