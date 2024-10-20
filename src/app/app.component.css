@@ -1,29 +1,23 @@
-.navbar-right {
-    margin-left: auto;
-}
-
-.navbar {
-    z-index: 1030; /* Ensure it stays on top of other elements */
+.top-area {
+    background: #333;
+    .navbar {
+      padding: 10px;
+    }
+    .navbar-toggle {
+      border: none;
+      &:focus {
+        outline: none;
+      }
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #fff;
+    }
+    .navbar-nav > li > a {
+      color: #ddd;
+      &:hover {
+        color: #fff;
+      }
+    }
   }
-
-.section {
-    height: 100vh;
-    /* Each section takes full viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    padding: 20px;
-}
-
-#home {
-    background-color: lightblue;
-}
-
-#about {
-    background-color: lightgreen;
-}
-
-#contactme {
-    background-color: lightcoral;
-}
+  

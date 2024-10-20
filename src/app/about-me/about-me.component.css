@@ -1,16 +1,45 @@
-.container {
+.container-custom {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.image-container {
+    background-color: #f5f5f5;
     display: flex;
+    justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
-.container img {
-    margin-right: 20px;
-    width: 200px;
-    /* Set your desired width */
+.text-container {
+    background-color: #fff;
+    padding: 30px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-wrap: break-word; /* Ensure long words/URLs break properly */
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Make sure columns wrap properly on smaller screens */
+}
+
+.col-md-6 {
+    flex: 1; /* Make sure both columns take equal width when space is available */
+    min-width: 300px; /* Ensure columns don't shrink below a certain width */
+}
+
+img {
+    max-width: 100%;
     height: auto;
-    /* Adjust the size as needed */
 }
 
-.container p {
-    margin: 0;
+@media (max-width: 768px) {
+    .container-custom {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
