@@ -5,10 +5,11 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AboutMeComponent } from './about-me/about-me.component'; // Import the AboutComponent
 import { AppRoutingModule } from './app-routing.module';
-import { ContactMeComponent } from './contact-me/contact-me.component'; // Import the AppRoutingModule
+import { ContactMeComponent } from './contact-me/contact-me.component';
+import { EducationComponent } from './education/education.component'; // Import the AppRoutingModule
 
 @NgModule({
-  declarations: [AppComponent, AboutMeComponent, ContactMeComponent],
+  declarations: [AppComponent, AboutMeComponent, ContactMeComponent, EducationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule, // Import the AppRoutingModule
