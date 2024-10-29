@@ -9,25 +9,15 @@ import { NgxTimelineModule } from '@frxjs/ngx-timeline';
 export class EducationComponent implements OnInit {
 
   events: Array<{ title: string; description: string; date: string }> = [];
-
+  timeLine : any ;
   ngOnInit(): void {
     // Initialize events with sample data
-    this.events = [
-      {
-        title: 'High School Graduation',
-        description: 'Completed high school with honors.',
-        date: '2018-05-20'
-      },
-      {
-        title: 'Bachelor\'s Degree in Computer Science',
-        description: 'Graduated with a Bachelor\'s degree from XYZ University.',
-        date: '2023-06-15'
-      },
-      {
-        title: 'Started First Job',
-        description: 'Joined ABC Corp as a software engineer.',
-        date: '2023-08-01'
-      }
-    ];
+    this.timeLine = [{ year: '2015', detail: 'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.' },
+      { year: '2016', detail: 'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.'},
+      { year: '2017', detail: 'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.'},
+      { year: '2018', detail: 'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.' },
+      { year: '2019', detail: 'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.'}
+      
+      ]
   }
 }

@@ -20,4 +20,12 @@
       }
     }
   }
+
+  /* <style> */
+.navbar {
+    background: linear-gradient(90deg, #4a90e2, #9013fe); /* Gradient background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+
   

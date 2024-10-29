@@ -1,0 +1,75 @@
+.timeline-container {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0; /* Add some padding to the top and bottom */
+    border-left: 2px solid #ddd; /* Vertical line on the left */
+}
+
+.timeline-item {
+    margin: 20px 0; /* Space between timeline items */
+    position: relative; /* Position relative for absolute positioning of content */
+    padding-left: 40px; /* Space for the bullet */
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0; /* Align the bullet with the left padding */
+    top: 50%; /* Center the bullet vertically */
+    transform: translateY(-50%); /* Adjust for bullet size */
+    width: 12px; /* Bullet width */
+    height: 12px; /* Bullet height */
+    background-color: #007bff; /* Bullet color */
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+}
+
+.timeline-content {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    margin-left: 20px; /* Adjust margin from the line */
+}
+
+.timeline-item h3 {
+    font-family: 'Arial', sans-serif; /* Use your preferred font */
+    font-size: 1.5rem; /* Adjust heading size */
+    font-weight: bold; /* Make heading bold */
+    color: #333; /* Set a color for the heading */
+}
+
+.timeline-item p {
+    font-family: 'Verdana', sans-serif; /* Use your preferred font */
+    font-size: 1rem; /* Adjust paragraph size */
+    line-height: 1.6; /* Improve line height for readability */
+    color: #555; /* Set a color for paragraphs */
+}
+
+/* Media query for mobile adjustments */
+@media (max-width: 768px) {
+    .timeline-container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .timeline-content {
+        width: 100%; /* Full width for content on mobile */
+        margin-left: 0; /* Align to the left */
+    }
+
+    .timeline-item h3 {
+        font-size: 1.25rem; /* Smaller heading size on mobile */
+    }
+
+    .timeline-item p {
+        font-size: 0.9rem; /* Smaller paragraph size on mobile */
+    }
+}

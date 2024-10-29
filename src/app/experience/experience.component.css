@@ -1,0 +1,91 @@
+.job-experience-container {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.job-timeline {
+    position: relative;
+    padding: 20px 0; /* Add some padding to the top and bottom */
+}
+
+.job-timeline-item {
+    margin: 20px 0; /* Space between timeline items */
+    position: relative; /* Position relative for absolute positioning of content */
+    padding-left: 40px; /* Space for the bullet */
+}
+
+.job-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0; /* Align the bullet with the left padding */
+    top: 50%; /* Center the bullet vertically */
+    transform: translateY(-50%); /* Adjust for bullet size */
+    width: 14px; /* Bullet width */
+    height: 14px; /* Bullet height */
+    background-color: #28a745; /* Green bullet color */
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+}
+
+.job-timeline-content {
+    background-color: #f8f9fa; /* Light background for content */
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin-left: 20px; /* Adjust margin from the line */
+    transition: transform 0.3s; /* Add a smooth hover effect */
+}
+
+.job-timeline-content:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.job-timeline-content h3 {
+    font-family: 'Arial', sans-serif; /* Use your preferred font */
+    font-size: 1.5rem; /* Adjust heading size */
+    font-weight: bold; /* Make heading bold */
+    color: #333; /* Set a color for the heading */
+    margin-bottom: 5px; /* Space below the heading */
+}
+
+.job-timeline-content h4 {
+    font-family: 'Arial', sans-serif; /* Use your preferred font */
+    font-size: 1.2rem; /* Adjust subheading size */
+    color: #555; /* Color for subheading */
+    margin-bottom: 5px; /* Space below the subheading */
+}
+
+.job-timeline-content p {
+    font-family: 'Verdana', sans-serif; /* Use your preferred font */
+    font-size: 0.95rem; /* Adjust paragraph size */
+    line-height: 1.5; /* Improve line height for readability */
+    color: #666; /* Set a color for paragraphs */
+}
+
+/* Media query for mobile adjustments */
+@media (max-width: 768px) {
+    .job-experience-container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .job-timeline-content {
+        width: 100%; /* Full width for content on mobile */
+        margin-left: 0; /* Align to the left */
+    }
+
+    .job-timeline-content h3 {
+        font-size: 1.25rem; /* Smaller heading size on mobile */
+    }
+
+    .job-timeline-content h4 {
+        font-size: 1rem; /* Smaller subheading size on mobile */
+    }
+
+    .job-timeline-content p {
+        font-size: 0.85rem; /* Smaller paragraph size on mobile */
+    }
+}

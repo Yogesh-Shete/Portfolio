@@ -1,6 +1,6 @@
 .container-custom {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .image-container {
@@ -71,3 +71,5 @@ img {
         font-size: 0.9rem; /* Smaller paragraph size on mobile */
     }
 }
+
+
