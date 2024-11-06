@@ -3,65 +3,120 @@
     margin-right: 5%;
     padding: 20px;
     overflow: hidden; /* Prevent overflow */
+    background: linear-gradient(to bottom right, #1a1a2e, #16213e, #0f3460); /* Vibrant dark gradient */
+    border-radius: 8px; /* Rounded corners for the container */
 }
 
 .timeline {
     position: relative;
     padding: 20px 0; /* Add some padding to the top and bottom */
-    border-left: 2px solid #ddd; /* Vertical line on the left */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%; /* Center the line */
+    top: 0; /* Start at the top */
+    bottom: 0; /* Extend to the bottom */
+    width: 2px; /* Line width */
+    background: #00c4ff; /* Line color */
+    z-index: 1; /* Place behind content */
 }
 
 .timeline-item {
     margin: 20px 0; /* Space between timeline items */
     position: relative; /* Position relative for absolute positioning of content */
-    padding-left: 40px; /* Space for the bullet */
+    width: 50%; /* Each item takes half the width */
 }
 
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: 0; /* Align the bullet with the left padding */
-    top: 50%; /* Center the bullet vertically */
-    transform: translateY(-50%); /* Adjust for bullet size */
-    width: 12px; /* Bullet width */
-    height: 12px; /* Bullet height */
-    background-color: #007bff; /* Bullet color */
-    border-radius: 50%; /* Make it circular */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+.timeline-item.left {
+    left: 0; /* Align to the left */
+    padding-right: 30px; /* Space for right padding */
+}
+
+.timeline-item.right {
+    left: 50%; /* Align to the right */
+    padding-left: 30px; /* Space for left padding */
 }
 
 .timeline-content {
-    background-color: #fff;
+    background-color: #ffffff; /* Light background for content */
     border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
     padding: 15px;
     border-radius: 5px;
-    margin-left: 20px; /* Adjust margin from the line */
+    position: relative; /* Position relative for proper stacking */
+    z-index: 2; /* Place above the line */
+}
+
+.timeline-item.left::after {
+    content: '';
+    position: absolute;
+    left: calc(100% - 6px); /* Position to the right of the box */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for bullet size */
+    width: 12px; /* Bullet width */
+    height: 12px; /* Bullet height */
+    background-color: #00c4ff; /* Bright bullet color */
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+    z-index: 3; /* Place above the line */
+}
+
+.timeline-item.right::after {
+    content: '';
+    position: absolute;
+    left: -6px; /* Align to the left side of the box */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for bullet size */
+    width: 12px; /* Bullet width */
+    height: 12px; /* Bullet height */
+    background-color: #00c4ff; /* Bright bullet color */
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+    z-index: 3; /* Place above the line */
 }
 
 .timeline-item h3 {
     font-family: 'Arial', sans-serif; /* Use your preferred font */
     font-size: 1.5rem; /* Adjust heading size */
     font-weight: bold; /* Make heading bold */
-    color: #333; /* Set a color for the heading */
+    color: #16213e; /* Darker color for better visibility */
 }
 
 .timeline-item p {
     font-family: 'Verdana', sans-serif; /* Use your preferred font */
     font-size: 1rem; /* Adjust paragraph size */
     line-height: 1.6; /* Improve line height for readability */
-    color: #555; /* Set a color for paragraphs */
+    color: #555; /* Set a darker color for paragraphs */
 }
 
-/* Media query for mobile adjustments */
+/* Title styling */
+h2.text-center {
+    color: #ffffff; /* White color for the title */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for better visibility */
+    font-family: 'Arial', sans-serif; /* Use your preferred font */
+    font-size: 2rem; /* Adjust title size */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Clearfix for the timeline */
+.timeline::after {
+    content: '';
+    display: table;
+    clear: both; /* Clear floats */
+}
+
 @media (max-width: 768px) {
-    .timeline-container {
-        margin-left: 5%;
-        margin-right: 5%;
+    .timeline-item {
+        float: none; /* Reset float for mobile */
+        width: 100%; /* Full width for mobile */
+        margin: 10px 0; /* Space between items */
+        padding-left: 0; /* Reset padding */
+        padding-right: 0; /* Reset padding */
     }
 
     .timeline-content {
-        width: 100%; /* Full width for content on mobile */
         margin-left: 0; /* Align to the left */
     }
 

@@ -1,55 +1,71 @@
 .container-custom {
     margin-left: 5%;
     margin-right: 5%;
+    background: linear-gradient(135deg, rgba(10, 25, 41, 0.9), rgba(30, 60, 90, 0.8)); /* Dark gradient background */
+    padding: 20px; /* Added padding for aesthetics */
+    border-radius: 8px; /* Rounded corners */
+    color: #f8f9fa; /* Light text color for contrast */
 }
 
 .image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
 }
+
+.image-container img {
+    max-width: 100%; /* Keep the image size the same */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Very small border with slight transparency */
+    border-radius: 8px; /* Optional: Rounded corners for the image */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow for the image */
+    margin: 0 auto; /* Center the image */
+}
+
 
 .text-container {
     padding: 30px;
     margin: 0; /* Add margin only on the top and bottom */
     border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+    border-radius: 8px; /* Rounded corners for text box */
     overflow-wrap: break-word;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for text */
 }
 
 .text-container h2 {
-    font-family: 'Arial', sans-serif; /* Change to your preferred font */
+    font-family: 'Arial', sans-serif; /* Use your preferred font */
     font-size: 2rem; /* Adjust font size */
     font-weight: bold; /* Make the heading bold */
     color: #333; /* Set a color for the heading */
     margin-bottom: 1rem; /* Add space below the heading */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
 }
 
 .text-container p {
-    font-family: 'Verdana', sans-serif; /* Change to your preferred font */
+    font-family: 'Verdana', sans-serif; /* Use your preferred font */
     font-size: 1rem; /* Adjust font size */
     line-height: 1.6; /* Improve line height for readability */
     color: #555; /* Set a color for the paragraphs */
     margin-bottom: 1rem; /* Add space between paragraphs */
 }
 
-
 img {
     max-width: 100%; /* Ensure the image fits within its container */
     height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow for the image */
 }
 
 .row {
     margin: 0; /* Remove row margin if any */
 }
 
-
 /* Media query for mobile adjustments */
 @media (max-width: 768px) {
-    .container-custom {
-        margin-left: 5%;
-        margin-right: 5%;
+    .row {
+        flex-direction: column; /* Ensure stacking vertically on mobile */
     }
 
     .image-container {
@@ -71,5 +87,3 @@ img {
         font-size: 0.9rem; /* Smaller paragraph size on mobile */
     }
 }
-
-

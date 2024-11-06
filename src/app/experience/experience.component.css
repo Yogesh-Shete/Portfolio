@@ -3,6 +3,8 @@
     margin-right: 5%;
     padding: 20px;
     overflow: hidden; /* Prevent overflow */
+    background: linear-gradient(135deg, rgba(10, 25, 41, 0.9), rgba(30, 60, 90, 0.8)); /* Dark blue gradient */
+    color: #f8f9fa; /* Light text color for contrast */
 }
 
 .job-timeline {
@@ -24,15 +26,15 @@
     transform: translateY(-50%); /* Adjust for bullet size */
     width: 14px; /* Bullet width */
     height: 14px; /* Bullet height */
-    background-color: #28a745; /* Green bullet color */
+    background-color: #ffc107; /* Yellow bullet color */
     border-radius: 50%; /* Make it circular */
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+    box-shadow: 0 0 8px rgba(255, 193, 7, 0.6); /* Add some shadow for depth */
 }
 
 .job-timeline-content {
-    background-color: #f8f9fa; /* Light background for content */
+    background-color: #ffffff; /* Light background for content */
     border: 1px solid #ddd;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
     padding: 20px;
     border-radius: 8px;
     margin-left: 20px; /* Adjust margin from the line */
