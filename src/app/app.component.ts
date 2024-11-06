@@ -8,14 +8,8 @@ import { Router } from '@angular/router';
 })
 
 export class AppComponent {
-  title = 'myPortfolio';
 
   constructor(private router: Router) {
 
-  }
-  AboutMe() {
-    // console.log("Hekko")
-
-    this.router.navigate(['/about'])
   }
 }

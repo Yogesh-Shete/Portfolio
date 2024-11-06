@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgxTimelineModule } from '@frxjs/ngx-timeline';
 
 @Component({
   selector: 'app-education',
